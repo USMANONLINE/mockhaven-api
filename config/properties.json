@@ -1,0 +1,16 @@
+{
+  "application": {
+    "name": "Mockhaven",
+    "port": 8080,
+    "path": "/api",
+    "isProduction": false
+  },
+  "datasource": {
+    "name": "mockhaven-datastore",
+    "host": "localhost",
+    "port": 5432,
+    "username": "postgres",
+    "password": "usmankida",
+    "dialect": "postgres"
+  }
+}
