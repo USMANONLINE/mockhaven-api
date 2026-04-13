@@ -2,7 +2,6 @@ const fastify = require('fastify')({
   logger: true
 });
 const { sequelize } = require('../config/datasource.config');
-
 const { configProperties} = require('../config/config.properties');
 const RouterConfig = require('./router.config');
 
@@ -12,7 +11,7 @@ class ServerConfig {
     this.applicationProps = configProperties.application;
 
     // Datastore Config
-    this.sequelize = sequelize();
+    this.sequelize = sequelize(fastify);
     this.initDatastore(this.applicationProps.isProduction);
 
     RouterConfig.initRoutes(fastify, this.applicationProps.path);

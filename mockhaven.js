@@ -1,4 +1,4 @@
-const ServerConfig = require('./config/server.config');
+const ServerConfig = require('./config/server.config')
 
 new ServerConfig()
-  .startApplication(8080);
+  .startApplication();

@@ -3,7 +3,7 @@ const { EntityManager } = require('../config/entity.manager');
 class HealthRoute {
 
   constructor (fastify, path) {
-    this.user = EntityManager.applicationUser;
+    this.sequelize = EntityManager.sequelize;
 
     const routePath = '/health'
     fastify.get(`${path}${routePath}`, this.getApplicationHealth.bind(this));
